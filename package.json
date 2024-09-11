@@ -1,0 +1,42 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "firebase": "10.13",
+    "pinia": "^2.2.2",
+    "vue": "^3.4.37"
+  },
+  "devDependencies": {
+    "@iconify-json/cib": "^1.1.10",
+    "@iconify-json/devicon": "^1.1.50",
+    "@iconify-json/devicon-plain": "^1.1.47",
+    "@iconify-json/fluent": "^1.1.62",
+    "@iconify-json/iconamoon": "^1.1.5",
+    "@iconify-json/logos": "^1.1.44",
+    "@iconify-json/lucide": "^1.1.207",
+    "@iconify-json/mdi": "^1.1.68",
+    "@iconify-json/mingcute": "^1.1.19",
+    "@iconify-json/mynaui": "^1.1.8",
+    "@iconify-json/pajamas": "^1.1.51",
+    "@iconify-json/ph": "^1.1.14",
+    "@iconify-json/simple-icons": "^1.1.114",
+    "@iconify-json/solar": "^1.1.10",
+    "@iconify-json/system-uicons": "^1.1.13",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.41",
+    "postcss-nesting": "^13.0.0",
+    "sass": "^1.77.8",
+    "scss": "^0.2.4",
+    "tailwindcss": "^3.4.10",
+    "unplugin-icons": "^0.19.2",
+    "vite": "^5.4.1"
+  }
+}
