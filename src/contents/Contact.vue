@@ -153,15 +153,20 @@ const handleSend = async () => {
   //
   setModalState.sending();
 
-  const docRef = await addMessage();
+  const delay = (time) => new Promise((resolve) => setTimeout(resolve, time));
 
-  setTimeout(() => {
+  // make the sending process take at least 500ms,
+  // regardless of how quickly the response is received
+  Promise.all([addMessage(), delay(500)]).then((res) => {
+    console.log(res);
+    const docRef = res[0];
+
     if (!!docRef) {
       setModalState.sent();
     } else {
       setModalState.error();
     }
-  }, 450);
+  });
 };
 
 //https://stackoverflow.com/a/52555739/22495195
