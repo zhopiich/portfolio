@@ -31,13 +31,13 @@
     </div>
 
     <div class="mt-3 flex flex-col">
-      <p class="text-xl">turning lines of code into immersive experiences.</p>
+      <p class="text-lg">turning lines of code into immersive experiences.</p>
     </div>
 
-    <div class="links-list mt-9 flex gap-3.5 *:transition-colors">
-      <div
-        class="h-12 aspect-square rounded-full bg-cyan-950 hover:bg-cyan-800 overflow-hidden"
-      >
+    <div
+      class="links-list mt-9 flex gap-3.5 *:transition-colors *:bg-cyan-950 hover:*:bg-cyan-800 active:*:bg-cyan-700 *:overflow-hidden"
+    >
+      <div class="h-12 aspect-square rounded-full">
         <a
           href="https://github.com/zhopiich"
           rel="noopener noreferrer nofollow"
@@ -48,9 +48,7 @@
         </a>
       </div>
 
-      <div
-        class="h-12 aspect-square rounded-full bg-cyan-950 hover:bg-cyan-800 overflow-hidden"
-      >
+      <div class="h-12 aspect-square rounded-full">
         <a
           href="mailto:zhoping9449@gmail.com"
           class="size-full flex justify-center items-center"
@@ -59,11 +57,9 @@
         </a>
       </div>
 
-      <div
-        class="h-12 rounded-full bg-cyan-950 hover:bg-cyan-800 overflow-hidden"
-      >
+      <div class="h-12 rounded-full">
         <a
-          href="https://drive.google.com/file/d/1IIPClN8ng7747-UdgVl3FBoMOgmaufYN/view"
+          href="https://drive.google.com/file/d/1FOGnCdGqTwkDAMYFfUYRTt-7aWHmMpcc/view"
           rel="noopener noreferrer nofollow"
           target="_blank"
           class="size-full px-4 flex justify-center items-center gap-1"
