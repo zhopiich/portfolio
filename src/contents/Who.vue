@@ -30,12 +30,12 @@
       <p class="mt-3 text-3xl font-medium text-slate-900">Frontend Developer</p>
     </div>
 
-    <div class="mt-3 flex flex-col">
-      <p class="text-lg">turning lines of code into immersive experiences.</p>
+    <div class="mt-1.5 flex flex-col">
+      <p class="text-xl">Turning lines of code into immersive experiences.</p>
     </div>
 
     <div
-      class="links-list mt-9 flex gap-3.5 *:transition-colors *:bg-cyan-950 hover:*:bg-cyan-800 active:*:bg-cyan-700 *:overflow-hidden"
+      class="links-list mt-11 flex gap-3.5 *:transition-colors *:bg-cyan-950 hover:*:bg-cyan-800 active:*:bg-cyan-700 *:overflow-hidden"
     >
       <div class="h-12 aspect-square rounded-full">
         <a
