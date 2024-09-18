@@ -60,7 +60,7 @@ const labelClicked = (e) => {
 
 <style lang="scss" scoped>
 .shadow-label {
-  box-shadow: rgba(187, 200, 209, 0.4) 0px 1px 12px;
+  box-shadow: rgba(187, 200, 209, 0.15) 0px 1px 10px;
 }
 
 * {
