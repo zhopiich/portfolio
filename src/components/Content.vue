@@ -80,7 +80,7 @@
             v-if="isMobile"
             class="size-full mt-[--height-nav] pt-[13px] overflow-auto"
           >
-            <div class="w-full px-4 pb-14 *:w-full">
+            <div class="w-full px-4 pb-20 *:w-full">
               <component
                 :is="item.content"
                 :key="index"
@@ -108,6 +108,7 @@
     </div>
 
     <ArrowButtons @prev="prev" @next="next" :isSliding="isSliding" />
+    <Footer />
   </section>
 </template>
 
@@ -118,6 +119,7 @@ import Projects from "../contents/Projects.vue";
 import Contact from "../contents/Contact.vue";
 import Indicators from "./Indicators.vue";
 import ArrowButtons from "./ArrowButtons.vue";
+import Footer from "./Footer.vue";
 
 import Luminous from "./Luminous.vue";
 import SlidingBanner from "./SlidingBanner.vue";
@@ -144,9 +146,12 @@ const list = [
   },
   {
     name: "SKILLS",
-    color: "#f3efdd",
+    color: "#f5eee8",
+    // color: "#edeadb",
+    // color: "#fff5d9",
+    // color: "#f3efdd",
     color2: "#C5C2C8",
-    color3: "rgba(255, 255, 254, 0.2)",
+    color3: "rgba(255, 255, 254, 0.3)",
     textColor: "#8D688D",
     status: ref("other_2"),
     content: Skills,
@@ -156,16 +161,23 @@ const list = [
     color: "#0f172a",
     color3: "rgba(29, 78, 216, 0.15)",
     textColor: "#918BA3",
-    color2: "#efe5cd",
+    color2: "#FFECB3",
+    // color2: "#f8e5ae",
+    // color2: "#F9E2AF",
+    // color2: "#fae3a0",
+    // color2: "#efe5cd",
     status: ref(null),
     content: Projects,
   },
   {
     name: "Contact",
-    color: "#e6e6e6",
-    color2: "#C2C5D6",
+    // color: "#f6f9fc",
+    color: "#eeeff1",
+    // color: "#e6e6e6",
+    color2: "#C8C8C8",
+    // color2: "#C2C5D6",
     textColor: "#6A729B",
-    color3: "rgba(255, 255, 255, 0.2)",
+    color3: "rgba(255, 255, 255, 0.3)",
     status: ref("other_1"),
     content: Contact,
   },
