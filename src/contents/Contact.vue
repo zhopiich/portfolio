@@ -1,22 +1,25 @@
 <template>
   <div class="w-dvw md:w-[500px] lg:w-[600px] mt-2">
-    <div class="w-full px-2 md:px-9 mb-4 text-slate-800 text-lg">
+    <div class="w-full px-2 md:px-4 mb-2.5 text-slate-800 text-lg">
       <p>Get in touch</p>
       <p>
         or shoot me an email directly on
         <span
           ><a
             href="mailto:zhoping9449@gmail.com"
-            class="font-bold text-[#626a93] hover:underline"
+            class="font-bold text-[#434966] hover:underline"
             >zhoping9449@gmail.com</a
           ></span
         >
       </p>
     </div>
 
-    <form @submit.prevent>
-      <div class="flex flex-col">
-        <div class="my-2 mx-2 md:mx-9">
+    <form
+      @submit.prevent
+      class="bg-violet-300/15 -mx-2 px-2 md:mx-0 md:px-0 pt-2 pb-4 rounded-md shadow-form"
+    >
+      <div class="flex flex-col *:mx-2 md:*:mx-4">
+        <div class="my-2">
           <TheLabel
             placeholder="Name"
             :isFocus="isFocus.name"
@@ -37,7 +40,7 @@
           </TheLabel>
         </div>
 
-        <div class="my-2 mx-2 md:mx-9">
+        <div class="my-2">
           <TheLabel
             placeholder="Email"
             :isFocus="isFocus.email"
@@ -57,7 +60,7 @@
           </TheLabel>
         </div>
 
-        <div class="my-2 mx-2 md:mx-9">
+        <div class="my-2">
           <TheLabel
             placeholder="Message"
             :isFocus="isFocus.message"
@@ -78,7 +81,7 @@
           </TheLabel>
         </div>
 
-        <div class="mt-4 mx-2 md:mx-9">
+        <div class="mt-4">
           <div class="flex justify-end">
             <button
               :disabled="!isAllValid || modalState !== 'close'"
@@ -206,11 +209,15 @@ textarea {
   box-shadow: rgb(190, 199, 208) 0px 1px 12px;
 }
 
+.shadow-form {
+  box-shadow: rgba(187, 200, 209, 0.55) 0px 1px 12px;
+}
+
 .send-button {
   background-color: #6a729b;
 
   &:hover {
-    background-color: #9399b7;
+    background-color: #8b90ad;
   }
 
   &:active {
