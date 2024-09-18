@@ -80,7 +80,7 @@
             v-if="isMobile"
             class="size-full mt-[--height-nav] pt-[13px] overflow-auto"
           >
-            <div class="w-full px-4 pb-14 *:w-full">
+            <div class="w-full px-4 pb-20 *:w-full">
               <component
                 :is="item.content"
                 :key="index"
@@ -108,6 +108,7 @@
     </div>
 
     <ArrowButtons @prev="prev" @next="next" :isSliding="isSliding" />
+    <Footer />
   </section>
 </template>
 
@@ -118,6 +119,7 @@ import Projects from "../contents/Projects.vue";
 import Contact from "../contents/Contact.vue";
 import Indicators from "./Indicators.vue";
 import ArrowButtons from "./ArrowButtons.vue";
+import Footer from "./Footer.vue";
 
 import Luminous from "./Luminous.vue";
 import SlidingBanner from "./SlidingBanner.vue";
