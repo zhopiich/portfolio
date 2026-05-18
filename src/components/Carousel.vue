@@ -6,7 +6,7 @@
     >
       <div class="imagesList size-full flex">
         <div
-          v-for="(image, index) in images"
+          v-for="(image, index) in props.images"
           class="size-full shrink-0"
           :key="image?.id || image"
         >
@@ -19,9 +19,9 @@
       </div>
     </div>
 
-    <div v-if="images.length > 1" class="mt-2 w-full h-full">
+    <div v-if="props.images.length > 1" class="mt-2 w-full h-full">
       <div class="flex bottom-2 w-full justify-center pointer-events-none">
-        <template v-for="n in images.length" :key="n">
+        <template v-for="n in props.images.length" :key="n">
           <div
             class="w-1.5 aspect-square rounded-full mr-1 last:mr-0 bg-white transition-opacity duration-500"
             :class="n - 1 === movement ? 'opacity-100' : 'opacity-40'"
@@ -30,7 +30,10 @@
       </div>
     </div>
 
-    <div class="mt-4 w-full flex justify-center gap-2.5">
+    <div
+      v-if="props.images.length > 1"
+      class="mt-4 w-full flex justify-center gap-2.5"
+    >
       <template v-for="button in arrowButtons">
         <div
           @click="button.handleClick"
@@ -47,20 +50,18 @@
 import MingcuteLeftFill from "~icons/mingcute/left-fill";
 import MingcuteRightFill from "~icons/mingcute/right-fill";
 
-import home from "../../public/home.png";
-import mobiless from "../../public/mobiless.png";
-import postDetails from "../../public/post_details.png";
-import message from "../../public/messages.png";
-import profile from "../../public/profile.png";
-import signup from "../../public/signup.png";
-
 import { ref, computed } from "vue";
+
+const props = defineProps({
+  images: {
+    type: Array,
+    required: true,
+  },
+});
 
 const imageViewport = ref(null);
 
-const images = ref([home, mobiless, postDetails, message, profile, signup]);
-
-const lengthimages = computed(() => images.value.length);
+const lengthimages = computed(() => props.images.length);
 
 const movement = ref(0);
 
