@@ -59,7 +59,7 @@
 
       <div class="h-12 rounded-full">
         <a
-          href="https://drive.google.com/file/d/1FOGnCdGqTwkDAMYFfUYRTt-7aWHmMpcc/view"
+          :href="resumeUrl"
           rel="noopener noreferrer nofollow"
           target="_blank"
           class="size-full px-4 flex justify-center items-center gap-1"
@@ -82,6 +82,7 @@ const props = defineProps(["activeItem", "isSliding"]);
 
 const lastName = "ZHENG";
 const firstName = "ZHONG PING";
+const resumeUrl = import.meta.env.VITE_RESUME_URL;
 </script>
 
 <style lang="scss" scoped>
