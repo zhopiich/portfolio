@@ -21,7 +21,7 @@
 
     <div v-if="props.images.length > 1" class="mt-2 w-full h-full">
       <div class="flex bottom-2 w-full justify-center pointer-events-none">
-        <template v-for="n in images.length" :key="n">
+        <template v-for="n in props.images.length" :key="n">
           <div
             class="w-1.5 aspect-square rounded-full mr-1 last:mr-0 bg-white transition-opacity duration-500"
             :class="n - 1 === movement ? 'opacity-100' : 'opacity-40'"
@@ -30,7 +30,10 @@
       </div>
     </div>
 
-    <div class="mt-4 w-full flex justify-center gap-2.5">
+    <div
+      v-if="props.images.length > 1"
+      class="mt-4 w-full flex justify-center gap-2.5"
+    >
       <template v-for="button in arrowButtons">
         <div
           @click="button.handleClick"
