@@ -48,8 +48,7 @@ import DeviconExpressWordmark from "~icons/devicon/express-wordmark";
 import DeviconHtml5 from "~icons/devicon/html5";
 import DeviconCss3 from "~icons/devicon/css3";
 import DeviconJavascript from "~icons/devicon/javascript";
-
-import { ref, watch, onMounted, computed } from "vue";
+import DeviconTypescript from "~icons/devicon/typescript";
 
 const skills = [
   ["Vue", DeviconVuejs],
@@ -63,9 +62,10 @@ const skills = [
 ].map((i) => ({ name: i[0], icon: i[1] }));
 
 const common = [
-  ["first", DeviconHtml5],
-  ["second", DeviconCss3],
-  ["third", DeviconJavascript],
+  ["first", DeviconTypescript],
+  ["second", DeviconJavascript],
+  ["third", DeviconHtml5],
+  ["fourth", DeviconCss3],
 ].map((i) => ({ class: i[0], icon: i[1] }));
 </script>
 
@@ -90,6 +90,10 @@ body:has(.common-skills > .first:hover) .common-skills > .third {
   transform: translateY(25%);
 }
 
+body:has(.common-skills > .first:hover) .common-skills > .fourth {
+  transform: translate(25%, 25%);
+}
+
 .common-skills > .second:hover {
   transform: translate(-12.5%, 12.5%) scale(1.25);
 }
@@ -102,6 +106,10 @@ body:has(.common-skills > .second:hover) .common-skills > .third {
   transform: translate(-25%, 25%);
 }
 
+body:has(.common-skills > .second:hover) .common-skills > .fourth {
+  transform: translateY(25%);
+}
+
 .common-skills > .third:hover {
   transform: translate(12.5%, -12.5%) scale(1.25);
 }
@@ -112,5 +120,25 @@ body:has(.common-skills > .third:hover) .common-skills > .first {
 
 body:has(.common-skills > .third:hover) .common-skills > .second {
   transform: translate(25%, -25%);
+}
+
+body:has(.common-skills > .third:hover) .common-skills > .fourth {
+  transform: translateX(25%);
+}
+
+.common-skills > .fourth:hover {
+  transform: translate(-12.5%, -12.5%) scale(1.25);
+}
+
+body:has(.common-skills > .fourth:hover) .common-skills > .first {
+  transform: translate(-25%, -25%);
+}
+
+body:has(.common-skills > .fourth:hover) .common-skills > .second {
+  transform: translateY(-25%);
+}
+
+body:has(.common-skills > .fourth:hover) .common-skills > .third {
+  transform: translateX(-25%);
 }
 </style>
